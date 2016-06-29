@@ -1,0 +1,6 @@
+loadUsers(
+	{"users":[ 
+	{"name": "adrian", "password": "prueba1"},
+	{"name": "jesus", "password": "prueba2"},
+	{"name": "tiger", "password": "prueba3"}
+]});
