@@ -1,0 +1,70 @@
+html {
+	font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}    
+
+body{
+	background-color: black;
+}
+nav{
+	background-color: black;
+}
+
+#spotify-search-page{
+
+    background: url("https://d2c87l0yth4zbw-2.global.ssl.fastly.net/i/playstation/ps-bg-no-logo-lg.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.logo-spotify{
+	left: 50%;
+	transform: translateX(-50%);
+}
+.card-panel {
+	padding: 0;
+}
+
+.card-panel-title {
+	margin: 0;
+	line-height: 1.42857143;
+}
+
+.card-panel-footer {
+	margin-top: 5px;
+	padding: 14px 15px 15px;
+	text-align: right;
+}
+.card-panel-header {
+	text-align: center;
+	background-color: #66b37d;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	color: white;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.card-panel-body {
+	position: relative;
+	padding: 20px;
+}
+
+
+.card-panel-title i.mdi-action-search {
+	color: #84bd00;
+	margin-right: 30px;
+}
+
+#button-login{
+	margin-left: 45%;
+	color: #fff;
+	background-color: #2ebd59;
+	margin-top: 50px;
+}
+
+#input-name{
+	color: #fff;
+}
+#input-password{
+	color: #fff;
+}

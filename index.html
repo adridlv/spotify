@@ -6,21 +6,65 @@
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
 	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	<link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+	<link href="css/animate.min.css" type="text/css" rel="stylesheet">
+	<link href="css/main.min.css" type="text/css" rel="stylesheet">
+	<link href="css/login.css" type="text/css" rel="stylesheet">
 	<script src="libs/jquery-2.2.4.min.js"></script>
 	<script src="js/index.js"></script>
 	
 </head>
-<body>
-	<input id="input-artist" type="text">
-	<button id="button-search">search</button>
+<body id="spotify-search-page">
+ <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center"><img height="40" style="margin-top: 10px;" src="images/logo-navbar.png"></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="login.html">Login</a></li>
+        <li><a href="https://github.com/adridlv/spotify" target=blank>GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
 	
-	<div class="container-artist">
-		
-	</div>
+	<div class="row row-no-bottom-margin">
+		<div class="col s8 offset-s2">
+			<div class="card-panel" id="searchcard">
+				<div class="card-panel-header">
+					<h4 class="card-panel-title"><i class="mdi-action-search"></i>BUSCA A TU ARTISTA FAVORITO</h4>
+				</div>
+				<div class="card-panel-body">
+					<div class="row row-no-bottom-margin" style="border: 0px solid red;">
+						<div class="col s9">
+							<div class="input-field">
+								<i class="mdi-av-my-library-music prefix"></i>
+								<input id="input-artist" type="text">
+								<label for="txtArtistSearch">artista</label>
+							</div>
+						</div>
+						<div class="col s3" style="margin-top: 5px;">
 
-	<div class="songtrack-list">
-		
-	</div>
-	 <script type="text/javascript" src="js/materialize.min.js"></script>
-</body>
-</html>
+							<button class="btn waves-effect waves-light" type="submit" name="action"  id="button-search">Buscar
+								<i class="material-icons right">send</i>
+							</button>
+						</div>
+					</div>
+					<div class="row row-no-bottom-margin" style="border: 0px solid red;">
+						<div class="col s12">
+							<ul id="container-artist"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+			<div class="container-artist">
+
+			</div>
+
+			<div class="songtrack-list">
+
+			</div>
+			<script type="text/javascript" src="js/materialize.min.js"></script>
+		</body>
+		</html>
