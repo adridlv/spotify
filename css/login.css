@@ -19,24 +19,31 @@ nav{
 /*div artist*/
 .artist{
 	display: inline-block;
+	cursor:pointer;
+	width:32.5%;
 }
 .name-artist{
 	font-size: 20px;
 	color: white;
     text-align: center;
+    margin-bottom:0;
 }
 
 .image-artist{
 
-	width: 280px;
-	height: 250px; 
-	margin: 10px;
+	width: 20em;
+	height: 18em; 
+	margin: 1em;
+	border-radius:50%;
+	
 	
 }
 
 /*div album*/
 .album{
 	display: inline-block;
+	cursor:pointer;
+	width:32.5%;
 }
 
 .album-name{
@@ -44,12 +51,14 @@ nav{
 	font-size: 20px;
 	color: white;
     text-align: center;
+    margin-bottom:0;
 }
 
 .image-album{
-	width: 280px;
-	height: 250px; 
-	margin: 10px;
+	width: 20em;
+	height: 18em; 
+	margin: 1em;
+
 }
 
 .logo-spotify{
@@ -99,6 +108,9 @@ nav{
 	background-color: #2ebd59;
 	margin-top: 50px;
 }
+#input-artist{
+	padding-left:.5em;
+}
 
 #input-name{
 	color: #fff;
@@ -106,12 +118,34 @@ nav{
 #input-password{
 	color: #fff;
 }
+#button-search{
+	margin: 1em;
+}
 
-//container artist
+.track-list{
+	background:white;
+}
+
+.track-song{
+	padding:0 1em;
+	border-bottom:1px solid black;
+}
+
+.track-song p{
+	cursor:pointer;
+}
+
+.track-song a{
+	margin-top:.5em;
+	cursor:pointer;
+}
+
+/*container artist*/
 
 .container-artist{
 	
 }
 iframe{
-	float: center;
+	margin: 0 auto;
+    display: block;
 }

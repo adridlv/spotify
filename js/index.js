@@ -30,23 +30,19 @@ function requestAjax (searchID, call){
 
 					$('.container-artist').append(element);
 				});
-				/*var artistID = response.artists.items[0].id;
-				var element = $(".container-artist");
-				requestAjax(artistID, "album");*/
 
 			}else if(call == "album"){
 				$('.container-album').empty();
 				response.items.forEach(function (album){
 					var elementAux = $("<div class='album col s4'>");
 					var imageAlbum = $("<img class='image-album'>").attr("src", album.images[0].url);
-					elementAux.append(imageAlbum);
 					elementAux.append($("<h1 class='album-name'>").text(album.name));
-				//requestTrack(album, element);
+					elementAux.append(imageAlbum);
+
 				elementAux.on("click", function(){
 					requestAjax(album.id,"track");
 				});
 
-				//element.append(elementAux);
 				$(".container-album").append(elementAux);
 			});
 
@@ -54,15 +50,12 @@ function requestAjax (searchID, call){
 				var elementAux = $("<ul class='track-list'>");
 				response.tracks.items.forEach(function(song){
 					var songElement = $("<li class='track-song'>");
-					
 					var songLink = $("<p class='link-song' style='display:inline-block;margin-right:1em;'>");
 					var songFavIcon = $("<a class='btn-floating btn-small waves-effect waves-light lightgreen' style='float:right;'>");
 					var songIcon = $("<i class='material-icons'>").text("add");
 					songFavIcon.append(songIcon);
-					//var songFavIcon = $("<i class='fa fa-plus-circle' style='display:inline-block;' 'aria-hidden='true'></i>")
 					
 					songFavIcon.on("click", function(){
-						//var songElement = {"name": song.name, "uri": song.uri};
 						var listSongs = JSON.parse(window.localStorage.getItem('song-list')) || {};
 						var currentUser = JSON.parse(window.localStorage.getItem('userLogin'));
 
@@ -96,13 +89,13 @@ function requestAjax (searchID, call){
 function getFavouriteList(){
 	var listSongs = JSON.parse(window.localStorage.getItem('song-list')) || {};
 	var currentUser = JSON.parse(window.localStorage.getItem('userLogin'));
-
 	var userListSong = listSongs[currentUser.name] || {};
 
 	console.log(userListSong);
+	var elementAux = $("<ul class='track-list'>");
 
-	for(song in userListSong){
-		var songElement = $("<li class='collection track-song'>");
+	Object.keys(userListSong).forEach(function (song){
+		var songElement = $("<li class='track-song'>");
 		var songLink = $("<p class='link-song' style='display:inline-block;margin-right:1em;'>");
 		songLink.text(song);
 		songElement.append(songLink);
@@ -110,8 +103,10 @@ function getFavouriteList(){
 			$('iframe').attr("src", "https://embed.spotify.com/?uri="+userListSong[song]);
 		});
 
-		$('.songtrack-list').append(songElement);
-	}
+		$(elementAux).append(songElement);
+	});
+	
+	$('.songtrack-list').append(elementAux);
 }
 
 $(document).ready(function(){
