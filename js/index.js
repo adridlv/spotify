@@ -17,7 +17,7 @@ function requestAjax (searchID, call){
 				$('.container-artist').empty();
 				response.artists.items.forEach(function(artist){
 					console.log(artist);
-					var element = $("<div class='artist'>");
+					var element = $("<div class='artist col s4'>");
 					var nameArtist = $("<h1 class='name-artist'>").text(artist.name);
 					element.append(nameArtist);
 					console.log(artist.images[0].url);
@@ -37,7 +37,7 @@ function requestAjax (searchID, call){
 			}else if(call == "album"){
 				$('.container-album').empty();
 				response.items.forEach(function (album){
-					var elementAux = $("<div class='album'>");
+					var elementAux = $("<div class='album col s4'>");
 					var imageAlbum = $("<img class='image-album'>").attr("src", album.images[0].url);
 					elementAux.append(imageAlbum);
 					elementAux.append($("<h1 class='album-name'>").text(album.name));
@@ -102,7 +102,7 @@ function getFavouriteList(){
 	console.log(userListSong);
 
 	for(song in userListSong){
-		var songElement = $("<li class='track-song'>");
+		var songElement = $("<li class='collection track-song'>");
 		var songLink = $("<p class='link-song' style='display:inline-block;margin-right:1em;'>");
 		songLink.text(song);
 		songElement.append(songLink);

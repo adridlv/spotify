@@ -11,9 +11,45 @@ nav{
 
 #spotify-search-page{
 
-    background: url("https://d2c87l0yth4zbw-2.global.ssl.fastly.net/i/playstation/ps-bg-no-logo-lg.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
+	background: url("https://d2c87l0yth4zbw-2.global.ssl.fastly.net/i/playstation/ps-bg-no-logo-lg.jpg");
+	background-size: 100%;
+
+}
+
+/*div artist*/
+.artist{
+	display: inline-block;
+}
+.name-artist{
+	font-size: 20px;
+	color: white;
+    text-align: center;
+}
+
+.image-artist{
+
+	width: 280px;
+	height: 250px; 
+	margin: 10px;
+	
+}
+
+/*div album*/
+.album{
+	display: inline-block;
+}
+
+.album-name{
+
+	font-size: 20px;
+	color: white;
+    text-align: center;
+}
+
+.image-album{
+	width: 280px;
+	height: 250px; 
+	margin: 10px;
 }
 
 .logo-spotify{
@@ -27,6 +63,7 @@ nav{
 .card-panel-title {
 	margin: 0;
 	line-height: 1.42857143;
+	font-size: 20px;
 }
 
 .card-panel-footer {
@@ -52,7 +89,8 @@ nav{
 
 .card-panel-title i.mdi-action-search {
 	color: #84bd00;
-	margin-right: 30px;
+	margin-right: 20px;
+	font-size: 20px;
 }
 
 #button-login{
@@ -67,4 +105,13 @@ nav{
 }
 #input-password{
 	color: #fff;
+}
+
+//container artist
+
+.container-artist{
+	
+}
+iframe{
+	float: center;
 }

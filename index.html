@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Spotify Artist Discovery</title>
-	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--Import materialize.css-->
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-	<link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-	<link href="css/animate.min.css" type="text/css" rel="stylesheet">
-	<link href="css/main.min.css" type="text/css" rel="stylesheet">
-	<link href="css/login.css" type="text/css" rel="stylesheet">
-	<link href="css/font-awesome.min.css" rel="stylesheet">
-	<script src="libs/jquery-2.2.4.min.js"></script>
-	<script src="js/index.js"></script>
-	
-</head>
 <body id="spotify-search-page">
+	<head>
+		<meta charset="UTF-8">
+		<title>Spotify Artist Discovery</title>
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+		<link href="css/animate.min.css" type="text/css" rel="stylesheet">
+		<link href="css/main.min.css" type="text/css" rel="stylesheet">
+		<link href="css/login.css" type="text/css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<script src="libs/jquery-2.2.4.min.js"></script>
+		<script src="js/index.js"></script>
+
+	</head>
+
 	<nav>
 		<div class="nav-wrapper">
 			<a href="#" class="brand-logo center"><img height="40" style="margin-top: 10px;" src="images/logo-navbar.png"></a>
 			<ul id="nav-mobile" class="left hide-on-med-and-down">
-				<li><a href="login.html">Login</a></li>
+				<li><a href="login-page.html">Login</a></li>
 				<li><a href="https://github.com/adridlv/spotify" target=blank>GitHub</a></li>
+				<li><a id="button-fav-list">Tu lista</a></li>
 			</ul>
 		</div>
 	</nav>
-	
+
 	<div class="row row-no-bottom-margin">
 		<div class="col s8 offset-s2">
 			<div class="card-panel" id="searchcard">
 				<div class="card-panel-header">
-					<h4 class="card-panel-title"><i class="mdi-action-search"></i>BUSCA A TU ARTISTA FAVORITO</h4>
+					<class="card-panel-title"><i class="mdi-action-search"></i>BUSCA A TU ARTISTA FAVORITO
 				</div>
 				<div class="card-panel-body">
 					<div class="row row-no-bottom-margin" style="border: 0px solid red;">
@@ -48,27 +50,29 @@
 							</button>
 						</div>
 					</div>
-					<div class="row row-no-bottom-margin" style="border: 0px solid red;">
-						<div class="col s12">
-							<ul id="container-artist"></ul>
-						</div>
-					</div>
+					
 				</div>
 			</div>
+		</div>
+	</div>
 
 
 
-			<div class="container-artist">
+	<div class="container container-artist"></div>
 
-			</div>
 
-			<div class="container-album"></div>
 
-			<div class="songtrack-list">
-			</div>
+	<div class="container container-album"></div>
 
-			<script type="text/javascript" src="js/materialize.min.js"></script>
-			<button id="button-fav-list" class="btn-large waves-effect waves-light lightgreen">Favourite List</button>
-			<iframe width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
-		</body>
-		</html>
+	
+
+	<div class="container songtrack-list"></div>
+
+	<iframe width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	
+	
+</body>
+</html>
