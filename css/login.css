@@ -13,7 +13,10 @@ nav{
 
 	background: url("https://d2c87l0yth4zbw-2.global.ssl.fastly.net/i/playstation/ps-bg-no-logo-lg.jpg");
 	background-size: 100%;
+}
 
+.user-hint{
+	color:white;
 }
 
 /*div artist*/
